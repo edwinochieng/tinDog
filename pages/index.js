@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Downloads from '../components/Downloads'
 import Features from '../components/Features'
 import Hero from '../components/Hero'
 import Press from '../components/Press'
@@ -16,6 +17,7 @@ export default function Home() {
       <Testimonials/>
       <Press/>
       <Pricing/>
+      <Downloads/>
 
     </div>
   )
