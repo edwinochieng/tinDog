@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Press() {
   return (
-    <div className="bg-[#ef8172] flex items-center justify-center pb-[7%]">
+    <div className="bg-[#ef8172] flex items-center justify-center pt-[3%] pb-[7%]">
       <div className="mx-5">
         <Image
           src="/images/TechCrunch.png"
