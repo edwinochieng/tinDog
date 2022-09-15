@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Features from '../components/Features'
 import Hero from '../components/Hero'
 import Press from '../components/Press'
+import Pricing from '../components/Pricing'
 import Testimonials from '../components/Testimonials'
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Features/>
       <Testimonials/>
       <Press/>
+      <Pricing/>
 
     </div>
   )
