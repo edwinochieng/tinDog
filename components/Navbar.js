@@ -1,20 +1,30 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import Link from 'next/link'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 
 function Navbar() {
     
   const [nav,setNav] = useState(false);
+  const [textColor, setTextColor] = useState('white')
 
   const handleNav = () => {
     setNav(!nav)
   }
+  useEffect(()=>{
+    const changeColor = () =>{if(window.screenY >= 90){
+        setTextColor('#000000');
+    } else{
+        setTextColor('#ffffff');
+    }}
+    
+    window.addEventListener('scroll',changeColor);
+  },[]);
   return (
     <div className='fixed top-0 left-0 w-full z-10 ease-in duration-300 mb-10'>
         <div className='flex justify-between items-center p-4 text-white max-w-[1240px] m-auto'>
-        <h1 className= "font-ubuntu font-bold text-4xl"><Link href="/">tindog</Link></h1>
+        <h1 style= {{color:`${textColor}`}} className= "font-ubuntu font-bold text-4xl"><Link href="/">tindog</Link></h1>
         
-            <ul className='hidden md:flex '>
+            <ul style= {{color:`${textColor}`}} className='hidden md:flex '>
                 <li className='p-3'>
                     <Link href="/contacts">Contacts</Link>
                 </li>
@@ -29,7 +39,7 @@ function Navbar() {
 
        {/*Mobile button*/}
        <div onClick = {handleNav} className='block md:hidden z-10'>
-       {nav? <AiOutlineClose size ={20}/> :<AiOutlineMenu size={20}/> }
+       {nav? <AiOutlineClose size ={20}/> :<AiOutlineMenu size={20} style= {{color:`${textColor}`}}/> }
         
        </div>
 
