@@ -3,7 +3,7 @@ import Pricing from '../components/Pricing'
 
 function pricing() {
   return (
-    <div className='h-max bg-gray-200'>
+    <div className='h-max pt-[7%] bg-gray-200'>
         <Pricing/>
     </div>
   )
